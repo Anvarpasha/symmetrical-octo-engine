@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">avtoqaraj_user_app</string>
+    <string name="home">Home</string>
+    <string name="shop">Shop</string>
+    <string name="garage">Garage</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
+    <string name="search">Axtar</string>
+    <string name="categories">Categories</string>
+    <string name="seeAll">See all</string>
+    <string name="detailType">İnteryer aksessuarları</string>
+    <string name="allBrands">All brands</string>
+    <string name="orderPart">Ehtiyat hissəsi sifariş et</string>
+    <string name="orderHelp">Biz sizin üçün tapmağa kömək\nedirik</string>
+    <string name="store">Mağaza açmaq istəyirsiniz?</string>
+    <string name="applicationform">Müraciət formunu doldurun</string>
+    <string name="interioraccessoriesname">Speedometers</string>
+    <string name="individiualDetailName">Fara</string>
+    <string name="individiualPrice">974.83AZN</string>
+    <string name="realPrice">698.19AZN</string>
+    <string name="mark">Marka</string>
+    <string name="model">Model</string>
+    <string name="releaseYear">Buraxılış ili</string>
+    <string name="VinNumber">Vin Kod</string>
+    <string name="spareName">Ehtiyyat hissəsinin adı</string>
+    <string name="unavailable">Yoxdur</string>
+    <string name="descriptionProduct">Məhsulun təsviri</string>
+    <string name="personName">Adınız</string>
+    <string name="email">E-mail</string>
+    <string name="phone">Telefon</string>
+    <string name="save">Yadda saxla</string>
+    <string name="storeName">Mağazanın adı</string>
+    <string name="storeAddress">Mağazanın ünvanı</string>
+    <string name="searchSparePart">Ehtiyyat hissəsi axtar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="officialDealers">Rəsmi dillerlər</string>
+    <string name="shopName">Mercedes-Benz Abşeron Avtomobil Mərkəzi</string>
+    <string name="shopTime">B.e – C: 09:00-18:00</string>
+    <string name="shops">Mağazalar</string>
+    <string name="shopStoreName">Avto Med</string>
+    <string name="individualannounce">Fərdi elanlar</string>
+</resources>

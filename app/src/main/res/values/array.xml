@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="carName" >
+        <item>Avtomobil</item>
+        <item>Mercedes</item>
+        <item>BMW</item>
+        <item>Hyundai</item>
+        <item>Mitsubishi</item>
+        <item>Toyota</item>
+        <item>Hummer</item>
+        <item>Lamborghini</item>
+        <item>Bentley</item>
+    </string-array>
+
+    <string-array name="mark">
+        <item>Bütün markalar</item>
+        <item>Corolla</item>
+        <item>SantaFe</item>
+        <item>Lancer</item>
+        <item>X6</item>
+        <item>Murcielago</item>
+        <item>Aventador</item>
+        <item>Urus</item>
+        <item>Huracan</item>
+    </string-array>
+
+    <string-array name="Model">
+        <item>Model</item>
+        <item>M5</item>
+        <item>X5</item>
+        <item>M3</item>
+        <item>Diablo</item>
+        <item>Egoisto</item>
+        <item>Sesto</item>
+        <item>Pregunto</item>
+        <item>Mansory</item>
+    </string-array>
+
+    <string-array name="releaseYear">
+        <item>Buraxılış ili</item>
+        <item>2006</item>
+        <item>2007</item>
+        <item>2000</item>
+        <item>2002</item>
+        <item>1993</item>
+        <item>1997</item>
+        <item>2006</item>
+        <item>1987</item>
+    </string-array>
+    
+    <string-array name="vinCode">
+        <item>94430fk</item>
+        <item>1907fb</item>
+        <item>fjdk940-2</item>
+        <item>39029dk</item>
+    </string-array>
+    
+    <string-array name="unavailable">
+        <item>Yoxdur</item>
+    </string-array>
+
+</resources>

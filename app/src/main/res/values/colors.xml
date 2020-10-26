@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    
+    <color name="selecteditem">#009688</color>
+    <color name="unselected">#61707F</color>
+    <color name="white">#ffffff</color>
+    <color name="spStrokeColor">#E4EAEF</color>
+    <color name="SearchTxt">#F5F8FF</color>
+    <color name="DefaultColor">#009688</color>
+    <color name="navyBlue">#031A2E</color>
+    <color name="gray90">#E5E5E5</color>
+    <color name="black">#000000</color>
+    <color name="cardBackground">#30323D</color>
+    <color name="boxesStrokecolor">#EEEEEE</color>
+    <color name="individualouter">#0A767680</color>
+    <color name="fillColor">#0A767680</color>
+    <color name="realPrice">#818C99</color>
+    <color name="spareTxt">#212738</color>
+    <color name="puregrey">#ACACAC</color>
+    <color name="underline">#031A2E</color>
+</resources>

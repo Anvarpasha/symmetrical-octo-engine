@@ -20,14 +20,14 @@ class AdapterCategories(private val allCategories: List<DataCategories>) : Recyc
 
     // list olaraq tanimladigimiz cardViewu RecyclerView icine atiriq
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriesViewHolder {
-        var inflater = LayoutInflater.from(parent.context)
-        var listItemCategories =  inflater.inflate(R.layout.list_item_categories,parent,false)
+        val inflater = LayoutInflater.from(parent.context)
+        val listItemCategories =  inflater.inflate(R.layout.list_item_categories,parent,false)
 
         return CategoriesViewHolder(listItemCategories)
     }
 
     override fun onBindViewHolder(holder: CategoriesViewHolder, position: Int) {
-        var categories = allCategories[position]
+        val categories = allCategories[position]
 
         holder.detailName.text = categories.detail
         holder.detailImg.setImageResource(categories.detailPhoto)

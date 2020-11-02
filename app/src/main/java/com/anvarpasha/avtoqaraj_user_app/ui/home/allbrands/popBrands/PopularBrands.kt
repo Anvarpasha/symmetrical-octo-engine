@@ -15,11 +15,9 @@ class PopularBrands : AppCompatActivity() {
         val viewPager = findViewById<ViewPager>(R.id.viewPager)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
 
+
         viewPager.adapter = setUpViewPager()
         tabLayout.setupWithViewPager(viewPager)
-
-
-
 
     }
 
@@ -30,10 +28,10 @@ class PopularBrands : AppCompatActivity() {
         val fragment1 = PopularBrandIns()
         val fragment2 = PopularBrandIns()
 
-        myPagerAdapter.addFragment(fragment1,"Popular Brands")
-        myPagerAdapter.addFragment(fragment2,"All Brands")
+        myPagerAdapter.addFragment(fragment1, "Popular Brands")
+        myPagerAdapter.addFragment(fragment2, "All Brands")
 
-      return myPagerAdapter
+        return myPagerAdapter
     }
 
 }

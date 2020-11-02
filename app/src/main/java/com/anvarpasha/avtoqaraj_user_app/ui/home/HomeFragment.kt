@@ -9,19 +9,17 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.anvarpasha.avtoqaraj_user_app.R
-import com.anvarpasha.avtoqaraj_user_app.ui.AllDatas
+import com.anvarpasha.avtoqaraj_user_app.AllDatas
 import com.anvarpasha.avtoqaraj_user_app.ui.home.allbrands.AdapterBrand
-import com.anvarpasha.avtoqaraj_user_app.ui.home.allbrands.popBrands.DataBrand
+import com.anvarpasha.avtoqaraj_user_app.ui.home.allbrands.popBrands.PopularBrands
 import com.anvarpasha.avtoqaraj_user_app.ui.home.categories.AdapterCategories
-import com.anvarpasha.avtoqaraj_user_app.ui.home.categories.DataCategories
 import com.anvarpasha.avtoqaraj_user_app.ui.home.categories.interior.InteriorActivity
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.anvarpasha.avtoqaraj_user_app.ui.home.openStore.OpenStoreActivity
+import com.anvarpasha.avtoqaraj_user_app.ui.home.sparePart.SpareActivity
+import kotlinx.android.synthetic.main.fragment_home.view.*
 
 
 class HomeFragment : Fragment() {
-
-    var allCategories=ArrayList<DataCategories>()
-    var allBrands = ArrayList<DataBrand>()
 
 
     // TODO ne ise yarayir  ?
@@ -45,28 +43,51 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val data = AllDatas()
 
-        val seeAllCat = seeAllCategories
 
-        seeAllCat.setOnClickListener {
-            val intent=Intent(activity, InteriorActivity::class.java)
-            startActivity(intent)
+        // transition to interior accessories from see all categories
+        view.seeAllCategories.setOnClickListener {
+            activity?.startActivity(
+                Intent(activity,InteriorActivity::class.java)
+            )
         }
+
+
+        // transition to all popular brands from all brands
+
+        view.seeAllBrands.setOnClickListener {
+            activity?.startActivity(
+                Intent(activity,PopularBrands::class.java)
+            )
+        }
+
+
+
+        //transition to order spare part from spare part
+        view.SparecardView.setOnClickListener {
+            activity?.startActivity(
+                Intent(activity,SpareActivity::class.java)
+            )
+        }
+
+        //transition to openStore from "Do u wanna openStore?"
+         view.storeCardView.setOnClickListener {
+             activity?.startActivity(
+                 Intent(activity,OpenStoreActivity::class.java)
+             )
+         }
+
 
 
         //for categories
         val recyclerViewCategories = view.findViewById<RecyclerView>(R.id.recyclerViewCategories)
         val myAdapter = AdapterCategories(data.fillDataSource(100))
         recyclerViewCategories.adapter = myAdapter
-        val linearLayoutManager = LinearLayoutManager(
-            activity,
-            LinearLayoutManager.HORIZONTAL,
-            false
-        )
+        val linearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         recyclerViewCategories.layoutManager=linearLayoutManager
         recyclerViewCategories.setHasFixedSize(true)
 
 
-
+        // for brands horizontal
         val recyclerViewBrands = view.findViewById<RecyclerView>(R.id.recyclerViewBrands)
         val brandAdapter = AdapterBrand(data.fillDataSourceBrand(100))
         recyclerViewBrands.adapter=brandAdapter
@@ -74,14 +95,10 @@ class HomeFragment : Fragment() {
         recyclerViewBrands.layoutManager=brandLayoutManager
         recyclerViewBrands.setHasFixedSize(true)
 
+
         // Inflate the layout for this fragment
         return view
     }
-
-
-
-
-
 
 
 }

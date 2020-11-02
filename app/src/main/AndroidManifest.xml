@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PopBrandIns"></activity>
+        <activity android:name=".ui.garage.specificCar.technique.TechIndicators"></activity>
+        <activity android:name=".ui.profile.chosenProduct.ChosenProd" />
+        <activity android:name=".ui.profile.allproducts.Allproducts" />
+        <activity android:name=".ui.profile.personalInfo.ChangePass" />
+        <activity android:name=".ui.profile.personalInfo.PersonaInfo" />
+        <activity android:name=".ui.garage.specificCar.SpecificCar" />
+        <activity android:name=".ui.garage.newmark.Newmark" />
+        <activity android:name=".ui.shop.announc.innerAnnounce.InnerAnnActivity" />
+        <activity android:name=".ui.shop.stores.shoplist.ShopList" />
+        <activity android:name=".ui.shop.dillers.dillerViewPager.DillerInner" />
+        <activity android:name=".PopBrandIns" />
         <activity android:name=".ui.home.allbrands.popBrands.PopularBrands" />
         <activity android:name=".ui.home.openStore.OpenStoreActivity" />
         <activity android:name=".ui.home.sparePart.SpareActivity" />
@@ -21,6 +31,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

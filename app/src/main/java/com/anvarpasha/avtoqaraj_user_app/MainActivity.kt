@@ -4,7 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import com.anvarpasha.avtoqaraj_user_app.ui.garage.GarageFragment
 import com.anvarpasha.avtoqaraj_user_app.ui.home.HomeFragment
+import com.anvarpasha.avtoqaraj_user_app.ui.profile.ProfileFragment
 import com.anvarpasha.avtoqaraj_user_app.ui.shop.ShopFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -47,6 +49,12 @@ class MainActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelect
             }
             R.id.action_shop -> {
                 ShopFragment.newInstance()
+            }
+            R.id.action_garage ->{
+                GarageFragment.newInstance()
+            }
+            R.id.action_profile -> {
+                ProfileFragment.newInstance()
             }
             else -> {
                 null

@@ -6,46 +6,36 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.anvarpasha.avtoqaraj_user_app.R
+import com.anvarpasha.avtoqaraj_user_app.AllDatas
+import com.anvarpasha.avtoqaraj_user_app.ui.home.allbrands.AdapterBrand
+import com.anvarpasha.avtoqaraj_user_app.ui.home.allbrands.DataBrand
 import kotlinx.android.synthetic.main.fragment_popular_brand_ins.*
 
 
 class PopularBrandIns : Fragment() {
 
-    var allPopBrands = ArrayList<DataBrand>()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view = inflater.inflate(R.layout.fragment_popular_brand_ins, container, false)
 
-        fillPopularBrand()
+        val data = AllDatas()
 
-        var popBrandAdapter = AdapterPopBrands(allPopBrands)
-
-        recyclerPopularBrands.adapter=popBrandAdapter
-
-        var gridlayoutmanager = GridLayoutManager(context,3,
-            GridLayoutManager.VERTICAL,false)
-
-        recyclerPopularBrands.layoutManager=gridlayoutmanager
-
-        recyclerPopularBrands.setHasFixedSize(true)
+        val recycPopBrands = view.findViewById<RecyclerView>(R.id.recyclerPopularBrands)
+        val popBrandAdapter = AdapterBrand(data.fillPopularBrand(60))
+        recycPopBrands.adapter=popBrandAdapter
+        val gridlayoutmanager = GridLayoutManager(context,3, GridLayoutManager.VERTICAL,false)
+        recycPopBrands.layoutManager=gridlayoutmanager
+        recycPopBrands.setHasFixedSize(true)
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_popular_brand_ins, container, false)
+        return view
     }
 
-    fun fillPopularBrand() : ArrayList<DataBrand>{
-        var allPopBrand = arrayOf(R.drawable.bmw, R.drawable.audi, R.drawable.hyundai)
 
-        for(element in allPopBrand){
-            var addedPopBrand = DataBrand(element)
-
-            allPopBrands.add(addedPopBrand)
-        }
-        return allPopBrands
-    }
 
 
 }

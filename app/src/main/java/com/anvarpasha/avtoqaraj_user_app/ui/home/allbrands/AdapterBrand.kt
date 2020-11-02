@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.anvarpasha.avtoqaraj_user_app.R
-import com.anvarpasha.avtoqaraj_user_app.ui.home.allbrands.popBrands.DataBrand
 import kotlinx.android.synthetic.main.list_item_brands.view.*
 
 class AdapterBrand(allBrands : ArrayList<DataBrand>) : RecyclerView.Adapter<AdapterBrand.BrandViewHolder>() {

@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.sparePart.SpareActivity">
+    tools:context=".ui.home.sparePart.SpareActivity"
+    android:overScrollMode="never">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -27,24 +28,24 @@
 
         <Spinner
             android:id="@+id/spareMarkSpn"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:entries="@array/mark"
             android:paddingStart="8dp"
-            android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView7"
             tools:ignore="RtlSymmetry" />
 
         <View
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@color/underline"
             app:layout_constraintBottom_toBottomOf="@+id/spareMarkSpn"
             app:layout_constraintEnd_toEndOf="@+id/spareMarkSpn"
-            app:layout_constraintStart_toStartOf="@+id/spareMarkSpn"/>
+            app:layout_constraintStart_toStartOf="@+id/spareMarkSpn" />
 
 
 
@@ -64,17 +65,17 @@
 
         <Spinner
             android:id="@+id/spareModelSpn"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
+            android:entries="@array/mark"
+            android:paddingStart="8dp"
             app:layout_constraintEnd_toEndOf="@+id/spareMarkSpn"
             app:layout_constraintStart_toStartOf="@+id/spareMarkSpn"
-            android:paddingStart="8dp"
-            android:entries="@array/mark"
             app:layout_constraintTop_toBottomOf="@+id/textView9"
             tools:ignore="RtlSymmetry" />
 
         <View
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@color/underline"
             app:layout_constraintBottom_toBottomOf="@+id/spareModelSpn"
@@ -96,17 +97,17 @@
 
         <Spinner
             android:id="@+id/spareReleaseSpn"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
+            android:entries="@array/releaseYear"
+            android:paddingStart="8dp"
             app:layout_constraintEnd_toEndOf="@+id/spareModelSpn"
             app:layout_constraintStart_toStartOf="@+id/spareModelSpn"
             app:layout_constraintTop_toBottomOf="@+id/textView10"
-            android:entries="@array/releaseYear"
-            android:paddingStart="8dp"
             tools:ignore="RtlSymmetry" />
 
         <View
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@color/underline"
             app:layout_constraintBottom_toBottomOf="@+id/spareReleaseSpn"
@@ -128,7 +129,7 @@
 
         <Spinner
             android:id="@+id/spareVinSpn"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:entries="@array/vinCode"
             android:paddingStart="8dp"
@@ -139,11 +140,12 @@
 
         <View
             android:id="@+id/view4"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@color/underline"
             app:layout_constraintBottom_toBottomOf="@+id/spareVinSpn"
-            app:layout_constraintEnd_toEndOf="@+id/spareVinSpn" />
+            app:layout_constraintEnd_toEndOf="@+id/spareVinSpn"
+            app:layout_constraintStart_toStartOf="@+id/spareVinSpn" />
 
 
         <TextView
@@ -161,23 +163,23 @@
 
         <EditText
             android:id="@+id/sparePartEdt"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            android:ems="10"
-            android:inputType="textPersonName"
             android:paddingStart="8dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:background="@color/white"
+            android:inputType="text|textLongMessage"
             android:hint="@string/unavailable"
-            android:background="@android:color/transparent"
             android:textColorHint="@color/puregrey"
             app:layout_constraintEnd_toEndOf="@+id/spareVinSpn"
             app:layout_constraintStart_toStartOf="@+id/spareVinSpn"
             app:layout_constraintTop_toBottomOf="@+id/textView12"
-            tools:ignore="RtlSymmetry"
-            android:autofillHints="" />
+            tools:ignore="RtlSymmetry" />
 
         <View
             android:id="@+id/view"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@color/underline"
             app:layout_constraintBottom_toBottomOf="@+id/sparePartEdt"
@@ -200,23 +202,23 @@
 
         <EditText
             android:id="@+id/spareDescriptionEdt"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
+            android:autofillHints=""
             android:background="@android:color/transparent"
             android:ems="10"
             android:hint="@string/unavailable"
-            android:inputType="textPersonName"
+            android:inputType="text|textLongMessage"
             android:paddingStart="8dp"
             android:textColorHint="@color/puregrey"
             app:layout_constraintEnd_toEndOf="@+id/sparePartEdt"
             app:layout_constraintStart_toStartOf="@+id/sparePartEdt"
             app:layout_constraintTop_toBottomOf="@+id/textView13"
-            tools:ignore="RtlSymmetry"
-            android:autofillHints="" />
+            tools:ignore="RtlSymmetry" />
 
         <View
             android:id="@+id/view2"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@color/underline"
             app:layout_constraintBottom_toBottomOf="@+id/spareDescriptionEdt"
@@ -238,8 +240,9 @@
 
         <EditText
             android:id="@+id/spareNameEdt"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
+            android:autofillHints=""
             android:background="@android:color/transparent"
             android:ems="10"
             android:hint="@string/unavailable"
@@ -249,12 +252,11 @@
             app:layout_constraintEnd_toEndOf="@+id/spareDescriptionEdt"
             app:layout_constraintStart_toStartOf="@+id/spareDescriptionEdt"
             app:layout_constraintTop_toBottomOf="@+id/textView14"
-            tools:ignore="RtlSymmetry"
-            android:autofillHints="" />
+            tools:ignore="RtlSymmetry" />
 
         <View
             android:id="@+id/view3"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@color/underline"
             app:layout_constraintBottom_toBottomOf="@+id/spareNameEdt"
@@ -276,7 +278,7 @@
 
         <EditText
             android:id="@+id/spareEmailEdt"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:autofillHints=""
             android:background="@android:color/transparent"
@@ -292,7 +294,7 @@
 
         <View
             android:id="@+id/view5"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@color/underline"
             app:layout_constraintBottom_toBottomOf="@+id/spareEmailEdt"
@@ -314,13 +316,13 @@
 
         <EditText
             android:id="@+id/sparePhoneEdt"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:autofillHints=""
             android:background="@android:color/transparent"
             android:ems="10"
             android:hint="@string/unavailable"
-            android:inputType="number"
+            android:inputType="phone"
             android:paddingStart="8dp"
             android:textColorHint="@color/puregrey"
             app:layout_constraintEnd_toEndOf="@+id/spareEmailEdt"
@@ -330,7 +332,7 @@
 
         <View
             android:id="@+id/view6"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@color/underline"
             app:layout_constraintBottom_toBottomOf="@+id/sparePhoneEdt"
@@ -340,17 +342,17 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/spareSaveBtn"
-            android:layout_width="328dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="32dp"
             android:backgroundTint="@color/DefaultColor"
-            app:cornerRadius="2dp"
             android:fontFamily="@font/lato"
             android:text="@string/save"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="16sp"
+            app:cornerRadius="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/sparePhoneEdt"
             app:layout_constraintStart_toStartOf="@+id/sparePhoneEdt"

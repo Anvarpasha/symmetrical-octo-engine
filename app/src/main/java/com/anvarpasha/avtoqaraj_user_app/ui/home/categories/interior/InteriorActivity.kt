@@ -4,55 +4,28 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import com.anvarpasha.avtoqaraj_user_app.R
-import com.anvarpasha.avtoqaraj_user_app.ui.home.categories.interior.AdapterAccessories
-import com.anvarpasha.avtoqaraj_user_app.ui.home.categories.interior.DataAccessories
+import com.anvarpasha.avtoqaraj_user_app.AllDatas
+import com.anvarpasha.avtoqaraj_user_app.ui.home.categories.AdapterCategories
 import kotlinx.android.synthetic.main.activity_interior.*
 
 class InteriorActivity : AppCompatActivity() {
     private lateinit var gridLayoutManager: GridLayoutManager
 
-    var allAccessories = ArrayList<DataAccessories>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_interior)
 
-        fillAccessoriesData()
+        val data = AllDatas()
 
-        var accAdapter =  AdapterAccessories(allAccessories)
-
+        val accAdapter =  AdapterCategories(data.fillAccessoriesData(50))
         gridLayoutManager = GridLayoutManager(this, 3)
-
         recyclerViewAccessories.adapter = accAdapter
-
-        var gridLayoutManager = GridLayoutManager(applicationContext,3, GridLayoutManager.HORIZONTAL,false)
-
+        val gridLayoutManager = GridLayoutManager(applicationContext,3, GridLayoutManager.VERTICAL,false)
         recyclerViewAccessories.layoutManager=gridLayoutManager
-
         gridLayoutManager.findLastVisibleItemPosition()
 
-
     }
-   fun fillAccessoriesData() : ArrayList<DataAccessories>{
-       var allAccPics = arrayOf(
-           R.drawable.speedometer,
-           R.drawable.speedometer,
-           R.drawable.speedometer,
-           R.drawable.speedometer,
-           R.drawable.speedometer,
-           R.drawable.speedometer,
-           R.drawable.speedometer,
-           R.drawable.speedometer
-       )
-       var allAccNames = arrayOf("Mats","Speedometer","Seat covers","Steering wheels","Windshield sun shades","Trunk covers")
 
-       for(i in 0..25){
-         var addedAcc = DataAccessories(allAccPics[i],allAccNames[i])
-
-           allAccessories.add(addedAcc)
-       }
-
-       return allAccessories
-   }
 
 
 }

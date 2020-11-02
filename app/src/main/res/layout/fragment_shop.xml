@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.shop.ShopFragment"
+    android:overScrollMode="never"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,25 +39,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView3"
-            android:layout_width="match_parent"
-            android:layout_height="238dp"
-            android:layout_marginStart="16dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDillers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:overScrollMode="never"
             android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="parent"
+            tools:itemCount="1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView21">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewDillers"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:overScrollMode="never"
-                tools:listitem="@layout/list_item_dillers" />
-
-        </HorizontalScrollView>
+            app:layout_constraintTop_toBottomOf="@+id/textView21"
+            tools:listitem="@layout/list_item_dillers" />
 
         <TextView
             android:id="@+id/textView22"
@@ -68,7 +62,7 @@
             android:textColor="@color/underline"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/textView21"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView3" />
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewDillers" />
 
         <TextView
             android:id="@+id/seeAllShops"
@@ -80,27 +74,24 @@
             android:textColor="@color/DefaultColor"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/seeAllDillers"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView3" />
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewDillers" />
 
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView4"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginStart="16dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewShops"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="8dp"
+            android:paddingEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView22">
+            app:layout_constraintTop_toBottomOf="@+id/textView22"
+            tools:itemCount="1"
+            tools:listitem="@layout/list_item_shops" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewShops"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:overScrollMode="never"
-                tools:listitem="@layout/list_item_shops" />
-
-        </HorizontalScrollView>
 
         <TextView
             android:id="@+id/textView24"
@@ -112,7 +103,7 @@
             android:textColor="@color/underline"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/textView22"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView4" />
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewShops" />
 
         <TextView
             android:id="@+id/seeAllAnnounce"
@@ -124,27 +115,27 @@
             android:textColor="@color/DefaultColor"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/seeAllShops"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView4" />
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewShops" />
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="223dp"
-            android:layout_marginStart="15dp"
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewIndividual"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="16dp"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="8dp"
+            android:paddingEnd="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView24">
+            app:layout_constraintTop_toBottomOf="@+id/textView24"
+            tools:itemCount="1"
+            tools:listitem="@layout/list_item_individual" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewIndividual"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:overScrollMode="never"
-                tools:listitem="@layout/list_item_individual"/>
-
-        </HorizontalScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

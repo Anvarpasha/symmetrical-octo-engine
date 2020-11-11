@@ -7,6 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.openStore.OpenStoreActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
@@ -18,7 +31,7 @@
         android:textColor="@color/spareTxt"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
 
     <EditText
@@ -33,17 +46,18 @@
         android:hint="@string/unavailable"
         android:inputType="textLongMessage|text"
         android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:textColorHint="@color/puregrey"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:ignore="RtlSymmetry" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <View
         android:id="@+id/view"
         android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@color/underline"
+        android:layout_height="2dp"
+        android:background="@color/lookspink"
         app:layout_constraintBottom_toBottomOf="@+id/storeNameEdt"
         app:layout_constraintEnd_toEndOf="@+id/storeNameEdt"
         app:layout_constraintStart_toStartOf="@+id/storeNameEdt" />
@@ -70,16 +84,17 @@
         android:hint="@string/unavailable"
         android:inputType="textLongMessage|text"
         android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:textColorHint="@color/puregrey"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/storeNameEdt"
         app:layout_constraintStart_toStartOf="@+id/storeNameEdt"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        tools:ignore="RtlSymmetry" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <View
         android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@color/underline"
+        android:layout_height="2dp"
+        android:background="@color/lookspink"
         app:layout_constraintBottom_toBottomOf="@+id/storeAddressEdt"
         app:layout_constraintEnd_toEndOf="@+id/storeAddressEdt"
         app:layout_constraintStart_toStartOf="@+id/storeAddressEdt" />
@@ -106,17 +121,18 @@
         android:hint="@string/unavailable"
         android:inputType="textPersonName"
         android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:textColorHint="@color/puregrey"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/storeAddressEdt"
         app:layout_constraintStart_toStartOf="@+id/storeAddressEdt"
-        app:layout_constraintTop_toBottomOf="@+id/textView17"
-        tools:ignore="RtlSymmetry" />
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <View
         android:id="@+id/view7"
         android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@color/underline"
+        android:layout_height="2dp"
+        android:background="@color/lookspink"
         app:layout_constraintBottom_toBottomOf="@+id/storePersonNameEdt"
         app:layout_constraintEnd_toEndOf="@+id/storePersonNameEdt"
         app:layout_constraintStart_toStartOf="@+id/storePersonNameEdt" />
@@ -143,16 +159,17 @@
         android:hint="@string/unavailable"
         android:inputType="textEmailAddress"
         android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:textColorHint="@color/puregrey"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/storePersonNameEdt"
         app:layout_constraintStart_toStartOf="@+id/storePersonNameEdt"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
-        tools:ignore="RtlSymmetry" />
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <View
         android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@color/underline"
+        android:layout_height="2dp"
+        android:background="@color/lookspink"
         app:layout_constraintBottom_toBottomOf="@+id/storeEmailEdt"
         app:layout_constraintEnd_toEndOf="@+id/storeEmailEdt"
         app:layout_constraintStart_toStartOf="@+id/storeEmailEdt" />
@@ -179,17 +196,18 @@
         android:hint="@string/unavailable"
         android:inputType="phone"
         android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:textColorHint="@color/puregrey"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/storeEmailEdt"
         app:layout_constraintStart_toStartOf="@+id/storeEmailEdt"
-        app:layout_constraintTop_toBottomOf="@+id/textView19"
-        tools:ignore="RtlSymmetry" />
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <View
         android:id="@+id/view8"
         android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@color/underline"
+        android:layout_height="2dp"
+        android:background="@color/lookspink"
         app:layout_constraintBottom_toBottomOf="@+id/storePhoneEdt"
         app:layout_constraintEnd_toEndOf="@+id/storePhoneEdt"
         app:layout_constraintStart_toStartOf="@+id/storePhoneEdt" />
@@ -198,10 +216,12 @@
         android:id="@+id/storeSaveBtn"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/DefaultColor"
         android:fontFamily="@font/lato"
-        android:text="@string/searchSparePart"
+        android:text="@string/save"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="16sp"

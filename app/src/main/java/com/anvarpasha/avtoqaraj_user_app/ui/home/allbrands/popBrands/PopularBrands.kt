@@ -1,11 +1,12 @@
 package com.anvarpasha.avtoqaraj_user_app.ui.home.allbrands.popBrands
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.anvarpasha.avtoqaraj_user_app.R
 import com.anvarpasha.avtoqaraj_user_app.ui.home.allbrands.MyPagerAdapter
 import com.google.android.material.tabs.TabLayout
+
 
 class PopularBrands : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,6 +15,13 @@ class PopularBrands : AppCompatActivity() {
 
         val viewPager = findViewById<ViewPager>(R.id.viewPager)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+
+         // TODO difference between this and other tooolbars ?
+        setSupportActionBar(toolbar)
+        supportActionBar?.setIcon(R.drawable.avtoqaraj)
+
+
 
 
         viewPager.adapter = setUpViewPager()
@@ -33,5 +41,9 @@ class PopularBrands : AppCompatActivity() {
 
         return myPagerAdapter
     }
+
+
+
+
 
 }

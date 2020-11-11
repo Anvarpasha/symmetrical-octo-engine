@@ -5,7 +5,11 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="5dp"
-    android:layout_marginStart="8dp">
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+
+    >
 
     <!--TODO bir list itemi iki layout ucun istifade etdikde ayri ozelliklere sahib olsa ne ede bilerik ?
        TODO meselen list item brands e yuxaridan 8dp versek home fragmentdeki list itemda 8 dp yoxdur? -->

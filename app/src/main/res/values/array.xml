@@ -59,4 +59,13 @@
         <item>Yoxdur</item>
     </string-array>
 
+    <array name="colors">
+        <item>"#EB5757"</item>
+        <item>"#282828"</item>
+        <item>"#212738"</item>
+        <item>"#031A2E"</item>
+        <item>"#A6A6A6"</item>
+
+    </array>
+
 </resources>

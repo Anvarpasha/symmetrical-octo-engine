@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.anvarpasha.avtoqaraj_user_app.R
@@ -16,7 +18,6 @@ import kotlinx.android.synthetic.main.fragment_garage.view.*
 
 class GarageFragment : Fragment() {
 
-    // TODO ne ise yarayir  ?
     companion object{
         @JvmStatic
         fun newInstance() =
@@ -34,17 +35,26 @@ class GarageFragment : Fragment() {
 
         val data = AllDatas()
 
-        // TODO bunu sil
-        view.recycGarage.setOnClickListener {
-            activity?.startActivity(
-                Intent(activity,SpecificCar::class.java)
-            )
-        }
+        // attach toolbar from XML to Kotlin code
+        val toolbar = view.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+
+        // set toolbar and avtoqaraj icon to toolbar
+        (activity as AppCompatActivity).setSupportActionBar(toolbar)
+        (activity as AppCompatActivity).supportActionBar?.setIcon(R.drawable.avtoqaraj)
+
+
+
+
+
+
+
 
 
         // for garageCars
         val recycGarage = view.findViewById<RecyclerView>(R.id.recycGarage)
-        val myAdapter = AdapterGarage(data.fillGarageCars(50))
+        val myAdapter = AdapterGarage(data.fillGarageCars(50),AdapterGarage.OnClickListener{
+            startActivity(Intent(activity,SpecificCar::class.java))
+        })
         recycGarage.adapter = myAdapter
         val linearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         recycGarage.layoutManager=linearLayoutManager

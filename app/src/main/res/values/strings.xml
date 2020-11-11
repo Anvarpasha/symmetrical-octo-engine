@@ -46,7 +46,6 @@
     <string name="dillersite"><u>www.volkswagen.az</u></string>
     <string name="storelistName">AVTOPLANET</string>
     <string name="productcount">211 Məhsul</string>
-    <string name="carName">AVENTADOR</string>
     <string name="carMark">AVENTADOR</string>
     <string name="CarStyle">c219 [restyling] [2008–2010]</string>
     <string name="addNewMark">Yeni marka əlavə et</string>
@@ -62,7 +61,7 @@
     <string name="updatephoto">Fotonuzu yeniləyin</string>
     <string name="fullname">Tam adı</string>
     <string name="name">Name</string>
-    <string name="changepass">Şirfəni dəyiş</string>
+    <string name="changepass">Şifrəni dəyiş</string>
     <string name="oldpass">Old password</string>
     <string name="newPass">New password</string>
     <string name="newpassR">New Password(Repeat)</string>
@@ -80,4 +79,22 @@
     <string name="bodytypo">Body type</string>
     <string name="coupe">Coupe</string>
     <string name="message">Mesaj</string>
+    <string name="hub">Stupitsa ön Toyota Prius</string>
+    <string name="autoparts">Avtotəmir hissələri</string>
+    <string name="productNumber">Məhsulun nömrəsi:\n116846</string>
+    <string name="addingdate">Yerləşmə tarixi:\n21–09–2020</string>
+    <string name="ToyotaPrius">Toyota Pirus(2008) Stupisya paceniki\nKod 43510-47010\nBasqa masinlarada var buyrub elaqe saxliya bilersiz.\n\nEhtiyat hissəsinin kodu:\n43510-47010</string>
+    <string name="suitablecars">Uyğun avtomobillərin siyahisi</string>
+    <string name="carGeneration">Toyota /Prius /2 generation [2003-2011]\n\nEhtiyat hissəsinin kodu:\n43510-47010</string>
+    <string name="call">Call</string>
+    <string name="category">Kateqoriya</string>
+    <string name="productname">Məhsulun adı</string>
+    <string name="price">Qiymət (AZN)</string>
+    <string name="vehicletype">Nəqliyyat növü</string>
+    <string name="urname">Adınız</string>
+    <string name="series">AMG GT S</string>
+    <string name="report">Hesabat</string>
+    <string name="seAll">Hamısına bax</string>
+
+
 </resources>

@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
-    // TODO companion object ne ise yarayir? V
+
 
     companion object{
         const val PARAM_NAVIGATION_ID = "navigation_id"

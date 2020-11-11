@@ -7,6 +7,7 @@ import com.anvarpasha.avtoqaraj_user_app.ui.home.allbrands.DataBrand
 import com.anvarpasha.avtoqaraj_user_app.ui.home.categories.DataCategories
 import com.anvarpasha.avtoqaraj_user_app.ui.profile.allproducts.DataProducts
 import com.anvarpasha.avtoqaraj_user_app.ui.shop.announc.DataIndividualAnn
+import com.anvarpasha.avtoqaraj_user_app.ui.shop.announc.innerAnnounce.descDetail.DataDescribed
 import com.anvarpasha.avtoqaraj_user_app.ui.shop.dillers.Datadillers
 import com.anvarpasha.avtoqaraj_user_app.ui.shop.stores.DataShopStore
 
@@ -71,6 +72,10 @@ class AllDatas {
     // added tech indicators in Garage
     var type = arrayOf("Front track","Body type","Number of seater ","Trailer load (with brakes)")
     var info = arrayOf("1600kg","1405 mm","4686mm","Coupe")
+
+
+    // added described detail in shop ->individual announcement
+    var sort = arrayOf("Avtotəmir hissələri","Xodovoy","Stupitsa")
 
 
     // categories in home
@@ -227,6 +232,59 @@ class AllDatas {
         }
         return list
     }
+
+    // decribed details in  shop -> individual announcment
+    fun fillDescribed(count: Int) : ArrayList<DataDescribed>{
+        var list = ArrayList<DataDescribed>()
+
+        for(i in 0..count){
+            val addedDesc = DataDescribed(sort[i%sort.size])
+
+            list.add(addedDesc)
+        }
+        return list
+    }
+
+    // search button in home fragment only individual w/out Categories
+    fun fillsearch(count: Int) : ArrayList<DataIndividualAnn>{
+        val list= ArrayList<DataIndividualAnn>()
+
+        for (i in 0..count){
+
+            val addedSearch = DataIndividualAnn(allDetailImg[i%allDetailImg.size],allDetailName[i%allDetailImg.size],discPrice[i%allDetailImg.size],price[i%allDetailImg.size])
+
+            list.add(addedSearch)
+        }
+        return list
+    }
+
+    // searchCat icon(magnifier) - >  Categories
+    fun searchCat(count : Int): ArrayList<DataCategories>{
+        var list = ArrayList<DataCategories>()
+
+        //tanimladigimiz datalari for dongusunde elave edirik
+        for(i in 0..count){
+            val addedDetail = DataCategories(detailNames[i%alldetail.size],alldetail[i%alldetail.size])
+
+            list.add(addedDetail)
+        }
+        return list
+    }
+
+
+    // searchCat icon(magnifier)  - > Individual
+    fun searchCatInd(count: Int) : ArrayList<DataIndividualAnn>{
+        val list= ArrayList<DataIndividualAnn>()
+
+        for (i in 0..count){
+
+            val addedSearch = DataIndividualAnn(allDetailImg[i%allDetailImg.size],allDetailName[i%allDetailImg.size],discPrice[i%allDetailImg.size],price[i%allDetailImg.size])
+
+            list.add(addedSearch)
+        }
+        return list
+    }
+
 
 
 

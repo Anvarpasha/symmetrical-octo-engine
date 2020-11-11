@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.anvarpasha.avtoqaraj_user_app">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label=""
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.garage.specificCar.technique.TechIndicators"></activity>
+        <activity android:name=".ui.home.searchDetail.searchCatDetail.SearchCatDetail" android:label="Seçilmiş məhsullar"></activity>
+        <activity android:name=".ui.home.searchDetail.SearchDetail"  android:label="Seçilmiş məhsullar" />
+        <activity android:name=".ui.home.placeAd.PlaceAds" />
+        <activity android:name=".ui.shop.announc.innerAnnounce.descDetail.DescribedProduct" />
+        <activity android:name=".ui.garage.specificCar.technique.TechIndicators" />
         <activity android:name=".ui.profile.chosenProduct.ChosenProd" />
         <activity android:name=".ui.profile.allproducts.Allproducts" />
         <activity android:name=".ui.profile.personalInfo.ChangePass" />
@@ -19,11 +24,15 @@
         <activity android:name=".ui.shop.announc.innerAnnounce.InnerAnnActivity" />
         <activity android:name=".ui.shop.stores.shoplist.ShopList" />
         <activity android:name=".ui.shop.dillers.dillerViewPager.DillerInner" />
-        <activity android:name=".PopBrandIns" />
+        <activity
+            android:name=".ui.home.allbrands.popBrands.PopularBrandIns"
+            tools:ignore="Instantiatable" />
         <activity android:name=".ui.home.allbrands.popBrands.PopularBrands" />
-        <activity android:name=".ui.home.openStore.OpenStoreActivity" />
+        <activity
+            android:name=".ui.home.openStore.OpenStoreActivity"
+            android:label="Mağaza açmaq" />
         <activity android:name=".ui.home.sparePart.SpareActivity" />
-        <activity android:name=".ui.home.categories.interior.InteriorActivity" />
+        <activity android:name=".ui.home.categories.interior.CategoriesActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

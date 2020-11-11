@@ -19,14 +19,14 @@ class AdapterAddedMark(private val addedMark : List<DataaddedMark>) : RecyclerVi
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): AdapterAddedMark.AddedMarkViewHolder {
+    ): AddedMarkViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val listItemAddedMark =  inflater.inflate(R.layout.list_item_addedmark,parent,false)
 
-        return AdapterAddedMark.AddedMarkViewHolder(listItemAddedMark)
+        return AddedMarkViewHolder(listItemAddedMark)
     }
 
-    override fun onBindViewHolder(holder: AdapterAddedMark.AddedMarkViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AddedMarkViewHolder, position: Int) {
         val addedMarks = addedMark[position]
 
         holder.vehicleIcon.setImageResource(addedMarks.vehicleIcon)

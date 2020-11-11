@@ -32,4 +32,9 @@
     <color name="orange">#D68F1D</color>
     <color name="heavyYellow">#33D68F1D</color>
     <color name="coolgrey">#7C7C7C</color>
+    <color name="mixedcolor">#F1F4F6</color>
+    <color name="xoxo">#606060</color>
+    <color name="blackshade">#282828</color>
+    <color name="greyshade">#525252</color>
+    <color name="softblack">#001026</color>
 </resources>

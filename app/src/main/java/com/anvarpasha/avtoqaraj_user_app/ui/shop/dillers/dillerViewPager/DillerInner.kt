@@ -2,6 +2,7 @@ package com.anvarpasha.avtoqaraj_user_app.ui.shop.dillers.dillerViewPager
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.anvarpasha.avtoqaraj_user_app.R
 import com.anvarpasha.avtoqaraj_user_app.ui.home.allbrands.MyPagerAdapter
@@ -16,6 +17,12 @@ class DillerInner : AppCompatActivity() {
 
         val viewPager = findViewById<ViewPager>(R.id.viewPagerDiller)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayoutDiller)
+        val toolar = findViewById<Toolbar>(R.id.toolbar)
+
+        setSupportActionBar(toolar)
+        supportActionBar?.title="Geri"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
 
         viewPager.adapter = setUpViewPager()

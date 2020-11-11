@@ -6,11 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.anvarpasha.avtoqaraj_user_app.R
 import com.anvarpasha.avtoqaraj_user_app.AllDatas
 import com.anvarpasha.avtoqaraj_user_app.ui.shop.announc.AdapterIndividual
+import com.anvarpasha.avtoqaraj_user_app.ui.shop.announc.innerAnnounce.InnerAnnActivity
 import com.anvarpasha.avtoqaraj_user_app.ui.shop.dillers.AdapterDillers
 import com.anvarpasha.avtoqaraj_user_app.ui.shop.dillers.dillerViewPager.DillerInner
 import com.anvarpasha.avtoqaraj_user_app.ui.shop.stores.AdapterShopStore
@@ -22,7 +25,7 @@ class ShopFragment : Fragment() {
 
 
 
-    // TODO ne ise yarayir  ?
+
     companion object{
         @JvmStatic
         fun newInstance() =
@@ -41,6 +44,11 @@ class ShopFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_shop, container, false)
 
         val data = AllDatas()
+
+        val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
+
+        (activity as AppCompatActivity?)!!.setSupportActionBar(toolbar)
+        (activity as AppCompatActivity?)!!.supportActionBar?.setIcon(R.drawable.avtoqaraj)
 
         //for official dillers
         val recyclerDiller = view.findViewById<RecyclerView>(R.id.recyclerViewDillers)
@@ -68,10 +76,19 @@ class ShopFragment : Fragment() {
         recyclerViewIndividual.setHasFixedSize(true)
 
 
-        //transaction to individual shop profile from official dillers recycView
+        //transaction to individual dealer profile from official dealers recycler View
         view.seeAllDillers.setOnClickListener {
             activity?.startActivity(
                 Intent(activity, DillerInner::class.java)
+            )
+        }
+
+
+        // transaction to individual announcement from individual announcement in shop screen
+
+        view.seeAllAnnounce.setOnClickListener {
+            activity?.startActivity(
+                Intent(activity,InnerAnnActivity::class.java)
             )
         }
 

@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.anvarpasha.avtoqaraj_user_app.R
+import com.anvarpasha.avtoqaraj_user_app.ui.home.categories.DataCategories
 import kotlinx.android.synthetic.main.list_item_brands.view.*
 
-class AdapterBrand(allBrands : ArrayList<DataBrand>) : RecyclerView.Adapter<AdapterBrand.BrandViewHolder>() {
+class AdapterBrand(var allBrands : ArrayList<DataBrand>, var onClickListener : OnClickListener) : RecyclerView.Adapter<AdapterBrand.BrandViewHolder>() {
 
     var brands = allBrands
 
@@ -31,10 +32,21 @@ class AdapterBrand(allBrands : ArrayList<DataBrand>) : RecyclerView.Adapter<Adap
     }
 
     override fun onBindViewHolder(holder: BrandViewHolder, position: Int) {
+        val popbrands = allBrands[position]
+
+        // to set only one item in categories
+        holder.itemView.setOnClickListener {
+            onClickListener.onClick(popbrands)
+        }
+
         holder.brandLogo.setImageResource(brands[position].brandLogo)
     }
 
 
+    // We assign class called OnClickListener for the item in RecyclerView
+    class OnClickListener(val clickListener: (model: DataBrand) -> Unit) {
+        fun onClick(model: DataBrand) = clickListener(model)
+    }
 
 
 }

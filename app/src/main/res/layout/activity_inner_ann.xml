@@ -133,17 +133,18 @@
             app:layout_constraintTop_toBottomOf="@+id/modelSpinner"
             tools:ignore="MissingConstraints" />
 
+        <!-- TODO burdaki list_itemi yeniden yig ve bu layoutun oldugu activityde recyclerlari doldur -->
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycindDet"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchBtn"
-            app:layout_constraintVertical_bias="0.0"
             tools:itemCount="1"
             tools:listitem="@layout/list_item_individual" />
 
